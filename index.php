@@ -1,0 +1,1 @@
+<?php header("Location: /staycore/pages/index.php"); exit; ?>

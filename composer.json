@@ -1,0 +1,14 @@
+{
+  "name": "staycore/hotel-platform",
+  "description": "Odoo-style Hotel Management & Booking Platform",
+  "require": {
+    "php": ">=8.0",
+    "stripe/stripe-php": "^14.0",
+    "dompdf/dompdf": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "StayCore\\": "src/"
+    }
+  }
+}

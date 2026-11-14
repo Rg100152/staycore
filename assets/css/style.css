@@ -1,0 +1,51 @@
+/* StayCore Glassmorphism Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body { font-family: 'Inter', sans-serif; }
+
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card {
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(220, 38, 38, 0.4);
+    box-shadow: 0 12px 40px -6px rgba(220, 38, 38, 0.15);
+}
+
+/* Room status badges */
+.status-available { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.status-reserved { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+.status-checked-in { background: rgba(234, 179, 8, 0.15); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }
+.status-cleaning { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.status-maintenance { background: rgba(156, 163, 175, 0.15); color: #94a3b8; border: 1px solid rgba(156, 163, 175, 0.3); }
+
+/* Kanban */
+.kanban-col { min-width: 260px; max-height: 80vh; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.2) transparent; }
+.kanban-col::-webkit-scrollbar { width: 6px; }
+.kanban-col::-webkit-scrollbar-track { background: transparent; }
+.kanban-col::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+
+.card-draggable { cursor: grab; transition: all 0.2s; }
+.card-draggable:active { cursor: grabbing; }
+.card-draggable.dragging { opacity: 0.5; border-color: #dc2626; }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeIn 0.4s ease forwards; }
+
+/* Scrollbar for body */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
